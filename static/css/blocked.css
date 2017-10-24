@@ -1,0 +1,20 @@
+.Container {
+    text-align: center;
+}
+.Container:before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.Content {
+    display: inline-block;
+    vertical-align: middle;
+}
+body {
+    font-family: 'Allerta';
+    font-size: 22px;
+    color: #06a38d;
+    background-image: url("/static/img/background.jpg");
+    background-repeat: no-repeat;
+}

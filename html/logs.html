@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Logs</h1>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <div class="well col-md-12">
+            <table class="table table-striped table-hover ">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Date</th>
+                        <th>Client</th>
+                        <th>Host</th>
+                        <th>Url</th>
+                        <th>Status</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {%if logs%}
+                    {%for log in logs%}
+                    <tr>
+                        <td>{{log.id}}</td>
+                        <td>{{log.date}}</td>
+                        <td>{{log.client_ip}}</td>
+                        <td>{{log.host | e}}</td>
+                        <td>{{log.url | e}}</td>
+                        <td>{{log.status | e}}</td>
+                    </tr>
+                    {%endfor%}
+                    {% else %}
+                    <p class="text-danger">Nothing to show!!</p>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

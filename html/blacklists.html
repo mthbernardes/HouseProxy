@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{total}} Blacklists <a class="btn btn-lg btn-primary" href="/blacklists/update" role="button">Update Blacklists</a></h1>
+
+
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <div class="well col-md-12">
+            <table class="table table-striped table-hover ">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>URL</th>
+                        <th>Delete?</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if blacklists %}
+                    {%for blacklist in blacklists%}
+                    <tr>
+                        <td>{{blacklist.id}}</td>
+                        <td>{{blacklist.url}}</td>
+                        <td><a href="/blacklists/delete/{{blacklist.id}}">Delete</a></td>
+                    </tr>
+                    {%endfor%}
+                    {% else %}
+                    <p class="text-danger">Nothing to show!!</p>
+                    {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

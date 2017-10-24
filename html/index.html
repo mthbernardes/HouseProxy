@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Jumbotron -->
+<div class="jumbotron">
+    <h1>Proxy House</h1>
+    <p>It's a simple HTTP Proxy created using Twisted, the major intent of this project, is to protect my parents from buying things in fake ecommerces</p>
+    <p>This web interface was created with Python Hug and the template style was created by <a href="https://github.com/brobin/hacker-bootstrap/" target="_blank">brobin</a></p>
+    <p>
+        <a class="btn btn-lg btn-primary" href="/blacklists/update" role="button">Update Blacklists</a>
+    </p>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="well col-md-12">
+            <div class="col-md-4">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Requests</h3>
+                    </div>
+                    <div class="panel-body">{{ total_requests }}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Blacklists</h3>
+                    </div>
+                    <div class="panel-body">{{ total_blacklists }}</div>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Regex</h3>
+                    </div>
+                    <div class="panel-body">0</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+{% endblock %}
