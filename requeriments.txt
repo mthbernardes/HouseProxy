@@ -1,5 +1,5 @@
 twisted
-jijan2
+jinja2
 hug
 pydal
 requests
