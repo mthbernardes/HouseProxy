@@ -5,7 +5,7 @@ Protect your parents from phishing, HTTP proxy focused on block phishing URL's
 <pre>
 git clone https://github.com/mthbernardes/HouseProxy.git
 cd HouseProxy/
-pip install -r requeriments.txt
+pip3 install -r requeriments.txt
 </pre>
 
 # Config
